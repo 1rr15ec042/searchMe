@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SearchMe!</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- <link rel="stylesheet" href="./fontawesome-free-5.15.1-web/css/all.css" /> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main>
+      <h1 class="offscreen">Search Me - A wikipedia powered search Engine.</h1>
+      <section class="searchEntry">
+        <h1 class="offscreen">Search Term Entry</h1>
+        <div class="logo" aria-hidden="true">
+          <span class="blue">S</span>
+          <span class="yellow">e</span>
+          <span class="blue">a</span>
+          <span class="green">r</span>
+          <span class="blue">c</span>
+          <span class="red">h</span>
+          <span class="green">M</span>
+          <span class="yellow">e</span>
+          <span class="red exclaim">!</span>
+        </div>
+
+        <form id="searchBar" class="searchBar">
+          <label class="offscreen" for="search"
+            >Enter a search term or phrase</label
+          >
+          <input type="text" id="search" autocomplete="off" />
+          <div
+            id="clear"
+            class="none button clear"
+            tabindex="0"
+            aria-label="clear search terms"
+          >
+            <i class="fas fa-times"></i>
+          </div>
+          <button
+            id="searchbutton"
+            class="button searchButton"
+            type="submit"
+            aria-label="submit button"
+          >
+            <i class="fas fa-search blue"></i>
+          </button>
+        </form>
+      </section>
+      <section class="results">
+        <h2 class="offscreen">search results</h2>
+        <div class="statsBar">
+          <div id="stats" class="stats" aria-live="assertive"></div>
+        </div>
+        <div id="searchResults" class="searchResults"></div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        <span aria-hidden="true">&lt;&lt;</span>powered by
+        <a href="https://www.wikepedia.org" target="_blank">wikepedia</a
+        ><span aria-hidden="true">&gt;&gt;</span>
+      </p>
+    </footer>
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>
